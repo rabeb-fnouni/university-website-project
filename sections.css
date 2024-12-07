@@ -1,0 +1,242 @@
+
+/* Sections générales */
+section {
+    padding: 6rem 5%;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--light-blue);
+    margin: 1rem auto;
+}
+
+/* Section Événements */
+.events-section {
+    background-color: var(--white);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: var(--off-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-icon {
+    font-size: 2.5rem;
+    color: var(--light-blue);
+    margin-bottom: 1.5rem;
+}
+
+.event-date {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Section Clubs */
+.clubs-section {
+    background-color: var(--off-white);
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.club-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+.club-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.club-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.club-card:hover .club-image img {
+    transform: scale(1.1);
+}
+
+.club-card h3 {
+    color: var(--primary-blue);
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.club-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+}
+
+.club-link {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.club-link:hover {
+    background-color: var(--light-blue);
+}
+
+/* Section Programmes */
+.programs-section {
+    background-color: var(--white);
+}
+
+.programs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.program-category {
+    margin-bottom: 4rem;
+}
+
+.program-category h3 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: var(--off-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program-card h4 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+.program-card ul {
+    list-style: none;
+}
+
+.program-card ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.program-card ul li::before {
+    content: '•';
+    color: var(--light-blue);
+    position: absolute;
+    left: 0;
+}
+
+/* Section Contact */
+.contact-section {
+    background-color: var(--off-white);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--light-blue);
+}
+
+.contact-item h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.map-container {
+    height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+}
